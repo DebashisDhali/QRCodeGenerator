@@ -1,0 +1,134 @@
+:root {
+    --primary: #9250abda;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    /* 1rem=62.5%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+
+}
+
+html,
+body {
+    font-family: sans-serif;
+    font-size:62.5%;
+}
+
+.hide{
+    display:none;
+}
+.generator {
+    min-width: 80%;
+    /* max-width: 50rem; */
+    min-height: 50%;
+    padding: 20px;
+    background:linear-gradient(rgba(255, 0, 0, 0.655),rgba(0, 0, 255, 0.775),rgba(0, 128, 0, 0.693),rgba(255, 192, 203, 0.721),rgba(255, 0, 255, 0.764));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    gap: .5rem;
+}
+
+.generator h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    color:white;
+}
+
+.generator h3 {
+    font-weight: 500;
+    font-size: 1.7rem;
+    color:white;
+}
+
+input,
+button {
+    width: 90%;
+    height: 4rem;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+}
+button{
+    font-weight: 600;
+    background-color:var(--primary);
+    color: white;
+}
+
+form {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1.5rem;
+}
+
+.qr {
+    display: flex;
+    justify-content: center;
+  height:0px;
+  opacity: 0px; 
+    transition: opacity 0.3s ease-in, height 0.1s ease;
+}
+.show{
+    height: 20rem;
+    width: 20rem;
+    /* background-image: url(./image/QR.svg);
+    background-size: cover; */
+   margin-top: 1.5rem;
+   opacity: 1;
+   transition: opacity 0.3s ease-in, height 0.1s ease;
+}
+
+button:hover {
+   
+    cursor: pointer;
+}
+
+button:active {
+    background-color: bisque;
+    color: black;
+}
+
+input:focus-visible{
+outline: .2rem solid black;
+}
+
+@media(min-width:555px) {
+    .generator {
+        min-width: 440px;
+
+    }
+}
+
+@media(max-width:290px) {
+    .qr {
+        height: 40%;
+        width: 50%;
+        display: inline-block;
+    }
+}
+
+@media(min-width:300px) {
+    .generator {
+        height: 35%;
+
+    }
+}
