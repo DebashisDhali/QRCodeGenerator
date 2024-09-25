@@ -24,13 +24,9 @@ const show = (event) => {
   else{
     return;
   }
-  // console.log(info);
-  // form.reset();
 };
 
 btn.addEventListener("click", show);
-
-//what is keyup? //Not clear
 
 inputedInfo.addEventListener("keyup", () => {
   //working process of trim() //Done
